@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "project": {
+            "type": "string"
+        },
+        "iteration": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string"
+        },
+        "predictions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "probability": {
+                        "type": "number"
+                    },
+                    "tagId": {
+                        "type": "string"
+                    },
+                    "tagName": {
+                        "type": "string"
+                    },
+                    "boundingBox":{
+                        "type":"object",
+                        "properties":{
+                            "left":{
+                                "type":"number"
+                            },
+                            "top":{
+                                "type":"number"
+                            },
+                            "width":{
+                                "type":"number"
+                            },
+                            "height":{
+                                "type":"number"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
